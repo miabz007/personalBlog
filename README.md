@@ -33,7 +33,6 @@ project/
 ├── portfolio.html
 ├── resume.html
 ├── about.html
-├── social.html
 ├── contact.html
 │
 ├── css/
