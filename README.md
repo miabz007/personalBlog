@@ -63,7 +63,7 @@ project/
 
 ## Author
 
-Your Name
+Irfan Adlie
 
 ## Acknowledgements
 
