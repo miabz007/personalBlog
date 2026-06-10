@@ -48,7 +48,10 @@ project/
 └── images/
 ```
 
-## Installation
+## Quick View Through Link (Deployed)
+https://project.univ.work/personalBlog/
+
+## Installation 
 
 1. Download or clone the project.
 2. Open the project folder.
@@ -56,10 +59,8 @@ project/
 
 ## Future Improvements
 
-* Add project details page
-* Add downloadable resume
 * Integrate contact form backend
-* Add animations and interactive effects
+
 
 ## Author
 
