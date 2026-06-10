@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,23 +15,103 @@
             background: #f5f5f5;
         }
 
-        /* FIXED CONTAINER OVERLAY (NOT fixed fullscreen) */
         .overlay-rect {
-            background: rgba(255, 255, 255, 0.90);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 12px;
-            padding: 30px;
-            margin-top: 90px; /* space for navbar */
+            padding: 20px;
+            margin-top: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        .portfolio-thumb img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
+        /* TITLE */
+        .page-title {
+            text-align: center;
+            font-weight: 800;
+            margin-bottom: 30px;
         }
 
-        .iso-box {
-            margin-bottom: 25px;
+        .page-title strong {
+            color: #d9534f;
+        }
+
+        /* FORM STYLE */
+        .form-control {
+            border-radius: 8px;
+            margin-bottom: 15px;
+            height: 45px;
+            box-shadow: none;
+            border: 1px solid #ddd;
+        }
+
+        textarea.form-control {
+            height: auto;
+        }
+
+        .form-control:focus {
+            border-color: #ff5900;
+            box-shadow: 0 0 6px rgba(217,83,79,0.2);
+        }
+
+        input[type="submit"] {
+            background: #ff5900;
+            color: #fff;
+            font-weight: 700;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #ff5900;
+        }
+
+        /* SOCIAL CARDS */
+        .social-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            transition: 0.3s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+        }
+
+        .social-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .social-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #fff;
+            margin-right: 15px;
+        }
+
+        .facebook { background: #3b5998; }
+        .instagram { background: #e1306c; }
+        .pinterest { background: #bd081c; }
+
+        .social-text h4 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .social-text p {
+            margin: 0;
+            color: #777;
+            font-size: 13px;
+        }
+
+        a {
+            text-decoration: none !important;
         }
     </style>
 </head>
@@ -59,92 +140,99 @@
     </div>
 </div>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <section class="templatemo-home">
 
     <div class="container">
         <div class="overlay-rect">
 
+            <!-- TITLE -->
+            <h2 class="page-title">
+                Contact <strong>Me</strong>
+            </h2>
+
+            <p style="text-align:center; color:#777; margin-bottom:10px;">
+                Feel free to reach out for collaboration, projects or opportunities
+            </p>
+
+            <!-- FORM -->
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="tm-portfolio-title">
-                        Contact <strong>ME</strong>
-                    </h2>
-                    <hr>
+
+                <div class="col-md-8 col-md-offset-2">
+
+                    <form action="#" method="post">
+
+                        <input class="form-control" type="text" placeholder="Your Name">
+
+                        <input class="form-control" type="email" placeholder="Your Email">
+
+                        <input class="form-control" type="text" placeholder="Subject">
+
+                        <textarea class="form-control" rows="6" placeholder="Your Message"></textarea>
+
+                        <input type="submit" value="Send Message">
+
+                    </form>
+
                 </div>
+
             </div>
 
+            <!-- SOCIAL -->
             <div class="row">
 
-    <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-4">
+                    <a href="https://facebook.com" target="_blank">
+                        <div class="social-card">
 
-        <form action="#" method="post">
+                            <div class="social-icon facebook">
+                                <i class="fa fa-facebook"></i>
+                            </div>
 
-            <input class="form-control" type="text" placeholder="Your Name">
+                            <div class="social-text">
+                                <h4>Facebook</h4>
+                                <p>Connect with me</p>
+                            </div>
 
-            <input class="form-control" type="email" placeholder="Your Email">
-
-            <input class="form-control" type="text" placeholder="Your Subject">
-
-            <textarea class="form-control" rows="6" placeholder="Your Message">
-                    </textarea>
-
-            <input class="form-control" type="submit" value="SHOOT MESSAGE">
-
-        </form>
-
-    </div>
-
-    <div class="col-md-12">
-        <p>
-            
-        </p>
-    </div>
-
-</div>
-
-<div class="row">
-    <div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.3s">
-        <div class="media facebook">
-            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                <div class="media-object pull-left">
-                    <i class="fa fa-facebook"></i>
+                        </div>
+                    </a>
                 </div>
-                <div class="media-body">
-                    <h4 style="color: black;" class="media-heading tm-social-title">Follow me on</h4>
-                    <h3 style="color: black;">Social Facebook</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.6s">
-        <div class="media twitter">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                <div class="media-object pull-left">
-                    <i class="fa fa-instagram"></i>
-                </div>
-                <div class="media-body">
-                    <h4 style="color: black;" class="media-heading tm-social-title">DM me on</h4>
-                    <h3 style="color: black;">Social Instagram</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-md-4 col-sm-4 wow rotateInUpLeft" data-wow-delay="0.9s">
-        <div class="media pinterest">
-            <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
-                <div class="media-object pull-left">
-                    <i class="fa fa-pinterest"></i>
-                </div>
-                <div class="media-body">
-                    <h4 style="color: black;" class="media-heading tm-social-title">Pin me on</h4>
-                    <h3 style="color: black;">Social Pinterest</h3>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
 
+                <div class="col-md-4">
+                    <a href="https://instagram.com" target="_blank">
+                        <div class="social-card">
+
+                            <div class="social-icon instagram">
+                                <i class="fa fa-instagram"></i>
+                            </div>
+
+                            <div class="social-text">
+                                <h4>Instagram</h4>
+                                <p>DM for updates</p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4">
+                    <a href="https://pinterest.com" target="_blank">
+                        <div class="social-card">
+
+                            <div class="social-icon pinterest">
+                                <i class="fa fa-pinterest"></i>
+                            </div>
+
+                            <div class="social-text">
+                                <h4>Pinterest</h4>
+                                <p>Design inspiration</p>
+                            </div>
+
+                        </div>
+                    </a>
+                </div>
+
+            </div>
 
         </div>
     </div>
@@ -156,16 +244,13 @@
     <p>© 2026 Miabz</p>
 </footer>
 
-<!-- JS -->
 <script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.nav.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/imagesloaded.min.js"></script>
-<script src="js/custom.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/smoothscroll.js"></script>
+                <script src="js/jquery.nav.js"></script>
+                <script src="js/isotope.js"></script>
+                <script src="js/imagesloaded.min.js"></script>
+                <script src="js/custom.js"></script>
 
 </body>
 </html>
-
-

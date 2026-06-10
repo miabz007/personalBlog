@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PAGE TITLE</title>
+    <title>Portfolio</title>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -11,129 +11,423 @@
 
     <style>
         body {
-            background: #f5f5f5;
+            background:
+                linear-gradient(135deg,
+                    #f5f7fa 0%,
+                    #cdcdcd 100%);
         }
 
-        /* FIXED CONTAINER OVERLAY (NOT fixed fullscreen) */
+        /* Main Container */
         .overlay-rect {
-            background: rgba(255, 255, 255, 0.90);
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 90px; /* space for navbar */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border: 1px solid rgba(255, 255, 255, .3);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 8px 32px rgba(31, 38, 135, .2);
+
+            padding: 50px;
+            margin-top: 90px;
         }
 
+        /* Portfolio Title */
+        .tm-portfolio-title {
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .tm-portfolio-title strong {
+            color: #28a745;
+        }
+
+        /* Portfolio Cards */
+        .portfolio-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.35s ease;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-thumb {
+            overflow: hidden;
+            background: #eee;
+        }
+
+        /* Default (Creative Media Design - square/normal images) */
         .portfolio-thumb img {
             width: 100%;
-            height: 350px;
+            height: 320px;
             object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .mobile-thumb img {
+            width: 100%;
+            height: 840px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .portfolio-card:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-info {
+            padding: 18px;
+            text-align: center;
+        }
+
+        .portfolio-info h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .portfolio-info p {
+            margin-top: 5px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        .web-thumb img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: top;
         }
 
         .iso-box {
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .overlay-rect {
+                padding: 20px;
+            }
+
+            .portfolio-thumb img {
+                height: 250px;
+            }
+        }
+
+        .tm-portfolio-title {
+            color: #222 !important;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tm-portfolio-title strong {
+            color: #28a745;
+        }
+
+        .overlay-rect hr {
+            border-top: 2px solid #e5e5e5;
+            width: 120px;
+            margin: 20px auto 40px;
+        }
+
+        .portfolio-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
             margin-bottom: 25px;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .portfolio-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .portfolio-info h4 {
+            font-size: 16px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .portfolio-info p {
+            font-size: 13px;
+            color: #777;
         }
     </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation">
-    <div class="container">
+    <!-- NAVBAR -->
+    <div class="navbar navbar-default bs-dos-nav navbar-fixed-top sticky-navigation">
+        <div class="container">
 
-        <div class="navbar-header">
-            <a href="index.html" class="navbar-brand">Ultra Profile</a>
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">Portfolio</a>
+            </div>
+
+            <nav class="collapse navbar-collapse" id="rock-navigation">
+                <ul class="nav navbar-nav navbar-right text-uppercase">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
         </div>
-
-        <nav class="collapse navbar-collapse" id="rock-navigation">
-            <ul class="nav navbar-nav navbar-right text-uppercase">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
     </div>
-</div>
 
-<!-- MAIN CONTENT -->
-<section class="templatemo-home">
-
-    <div class="container">
+    <!-- MAIN CONTENT -->
+    <div class="container-fluid" style="max-width:1400px;">
         <div class="overlay-rect">
 
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="tm-portfolio-title">
-                        My <strong>Portfolio</strong>
-                    </h2>
-                    <hr>
-                </div>
+            <div class="text-center" style="margin-bottom:40px;">
+
+                <h2 style="
+                        color:#222;
+                        font-weight:800;    
+                        font-size:38px;
+                        letter-spacing:1px;
+                        margin-top:5px;
+                        text-shadow:none;
+                        opacity:1;
+                    ">
+                    My <span style="color:#ff8800;">Portfolio</span>
+                </h2>
+
+                <p style="color:#666; margin-top:10px;">
+                    A collection of creative work across design, mobile, and web development
+                </p>
+
+                <hr style="width:120px; border-top:2px solid #ddd; margin:20px auto;">
             </div>
 
 
             <!-- PORTFOLIO GRID -->
-            <div class="row">
+            <div class="text-center" style="margin-top:20px;">
 
-                <div class="iso-box html photoshop col-md-4 col-sm-6">
-                    <div class="portfolio-thumb">
-                        <img src="images/korpo_ig.jpg">
+                <h3 style="font-weight:700; margin-bottom:20px;">
+                    🎨 Creative Media Design
+                </h3>
+
+                <div class="row">
+
+                    <div class="iso-box col-md-4 col-sm-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb">
+                                <img src="images/korpo_ig.jpg" alt="">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Association</h4>
+                                <p>Social Media Design</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="iso-box col-md-4 col-sm-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb">
+                                <img src="images/it4u_ktp_siri2.jpg" alt="">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Faculty Campaign</h4>
+                                <p>Program Poster Design</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="iso-box col-md-4 col-sm-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb">
+                                <img src="images/tahniah_YDP.jpg" alt="">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Association </h4>
+                                <p>News Design</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="iso-box col-md-4 col-sm-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb">
+                                <img src="images/werewolf.jpg" alt="">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Freelance</h4>
+                                <p>Logo Design</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="iso-box col-md-4 col-sm-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb">
+                                <img src="images/pmfikselection.jpg" alt="">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Association</h4>
+                                <p>Poster Design</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="iso-box col-md-4 col-sm-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb">
+                                <img src="images/haringundi.jpg" alt="">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Association</h4>
+                                <p>News Poster Design</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="iso-box html wordpress col-md-4 col-sm-6">
-                    <div class="portfolio-thumb">
-                        <img src="images/it4u_ktp_siri2.jpg">
+            <div class="text-center" style="margin-top:60px;">
+
+                <h3 style="font-weight:700; margin-bottom:20px;">
+                    📱 Mobile Development
+                </h3>
+
+                <p style="color:#666; margin-bottom:25px;">
+                    Flutter / Firebase mobile applications UI previews and screens
+                </p>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 iso-box">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb mobile-thumb">
+                                <img src="images/recipient.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Recipient Screen</h4>
+                                <p>Flutter UI</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="iso-box wordpress col-md-4 col-sm-6">
-                    <div class="portfolio-thumb">
-                        <img src="images/tahniah_YDP.jpg">
+                    <div class="col-md-4 col-sm-6 iso-box">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb mobile-thumb">
+                                <img src="images/admin.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Admin Dashboard</h4>
+                                <p>Firebase App</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="iso-box mobile col-md-4 col-sm-6">
-                    <div class="portfolio-thumb">
-                        <img src="images/werewolf.jpg">
-                    </div>
-                </div>
-
-                <div class="iso-box photoshop col-md-4 col-sm-6">
-                    <div class="portfolio-thumb">
-                        <img src="images/pmfikselection.jpg">
-                    </div>
-                </div>
-
-                <div class="iso-box html col-md-4 col-sm-6">
-                    <div class="portfolio-thumb">
-                        <img src="images/haringundi.jpg">
+                    <div class="col-md-4 col-sm-6 iso-box">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb mobile-thumb">
+                                <img src="images/driver.png">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Driver Dashboard</h4>
+                                <p>Real-time integration</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
+            <div class="text-center" style="margin-top:60px;">
+
+                <h3 style="font-weight:700; margin-bottom:20px;">
+                    💻 Web Application Development
+                </h3>
+
+                <p style="color:#666; margin-bottom:25px;">
+                    PHP / CodeIgniter / MySQL based systems and dashboards
+                </p>
+
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6 iso-box">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb web-thumb">
+                                <img src="images/sc1.PNG">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Admin Dashboard</h4>
+                                <p>CodeIgniter 4</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 iso-box">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb web-thumb">
+                                <img src="images/sc2.PNG">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Booking System</h4>
+                                <p>MySQL + PHP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 iso-box">
+                        <div class="portfolio-card">
+                            <div class="portfolio-thumb web-thumb">
+                                <img src="images/sc3.PNG">
+                            </div>
+                            <div class="portfolio-info">
+                                <h4>Fullstack System</h4>
+                                <p>Ready to deploy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER -->
+                <footer style="text-align:center; padding:10px;">
+                    <p>© 2026 MIABZ</p>
+                </footer>
+
+                <!-- JS -->
+                <script src="js/jquery.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/smoothscroll.js"></script>
+                <script src="js/jquery.nav.js"></script>
+                <script src="js/isotope.js"></script>
+                <script src="js/imagesloaded.min.js"></script>
+                <script src="js/custom.js"></script>
+            </div>
         </div>
     </div>
-
-</section>
-
-<!-- FOOTER -->
-<footer style="text-align:center; padding:70px;">
-    <p>© 2026 MIABZ</p>
-</footer>
-
-<!-- JS -->
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/jquery.nav.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/imagesloaded.min.js"></script>
-<script src="js/custom.js"></script>
-
 </body>
+
 </html>
